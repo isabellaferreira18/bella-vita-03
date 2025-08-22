@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bella Vita — Cliente</title>
+  <style>
+    /* Menu horizontal */
+header nav ul {
+    display: flex;        /* Deixa os itens em linha */
+    gap: 20px;            /* Espaço entre os itens */
+    list-style: none;     /* Remove os marcadores */
+    margin: 0;            /* Remove margem */
+    padding: 0;           /* Remove padding */
+  }
+  
+  header nav ul li {
+    margin: 0;            /* Remove espaçamento padrão das li */
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px 10px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #276749;
+    border-radius: 6px;
+    color: #fff;
+  }
+  
+    :root{
+      --green:#2f855a; --green-dark:#276749; --bg:#f7f7f7; --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:#1f2937}
+    a{color:inherit}
+    button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--green);color:#fff;font-weight:600}
+    button:hover{background:var(--green-dark)}
+
+    .cliente header{display:flex;align-items:center;justify-content:space-between;background:var(--green);color:#fff;padding:14px 28px}
+    .cliente .nav a{margin:0 10px;color:#fff;text-decoration:none;font-weight:600}
+    .cliente .logo{font-weight:800;font-size:20px;letter-spacing:.3px}
+    .banner{background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;color:#fff;text-align:center;padding:60px 16px}
+    .banner h1{margin:0 0 6px;text-shadow:1px 1px 4px rgba(0,0,0,.7)}
+    .banner p{text-shadow:1px 1px 4px rgba(0,0,0,.7)}
+    .banner input{width:min(560px,92%);padding:12px;border-radius:8px;border:0;margin-top:10px}
+    .categorias{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px}
+    .chip{background:#ecfdf5;border:1px solid #b7e5cf;color:#065f46;padding:8px 12px;border-radius:999px;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;padding:24px;max-width:1100px;margin:0 auto}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:16px;text-align:center}
+    .card img{width:110px;height:110px;object-fit:contain;display:block;margin:8px auto 12px}
+    .card h3{margin:6px 0 2px}
+    .price{font-weight:800;margin:6px 0 12px}
+    footer{background:var(--green);color:#fff;text-align:center;padding:12px;margin-top:24px}
+
+    .cart{display:flex;gap:6px;align-items:center;font-size:20px}
+    .badge{min-width:24px;height:24px;border-radius:999px;background:#fff;color:var(--green);display:inline-flex;align-items:center;justify-content:center;font-weight:800}
+  </style>
+</head>
+<body class="cliente">
+
+  <header>
+    <div class="logo">🌱 Bella Vita</div>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>      
+    <div class="cart">🛍️ <span id="qtd-carrinho" class="badge">0</span></div>
+  </header>
+
+  <div class="banner" id="home">
+    <h1>Horta Natural Bella Vita</h1>
+    <p>Produtos frescos, saudáveis e direto da nossa horta até você</p>
+    <input type="search" placeholder="Buscar produtos…" />
+  </div>
+
+  <div class="categorias">
+    <span class="chip">Verduras</span>
+    <span class="chip">Legumes</span>
+    <span class="chip">Frutas</span>
+    <span class="chip">Temperos</span>
+    <span class="chip">Orgânicos</span>
+  </div>
+
+  <div class="banner" id="produtos">
+    <h1>Horta Natural Bella Vita</h1>
+    <p>Produtos frescos, saudáveis e direto da nossa horta até você</p>
+    <input type="search" placeholder="Buscar produtos…" />
+  </div>
+
+ 
+</body>
+</html>
+
