@@ -5,83 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bella Vita — Cliente</title>
   <style>
+    /* Menu horizontal */
+header nav ul {
+    display: flex;        /* Deixa os itens em linha */
+    gap: 20px;            /* Espaço entre os itens */
+    list-style: none;     /* Remove os marcadores */
+    margin: 0;            /* Remove margem */
+    padding: 0;           /* Remove padding */
+  }
+  
+  header nav ul li {
+    margin: 0;            /* Remove espaçamento padrão das li */
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px 10px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #276749;
+    border-radius: 6px;
+    color: #fff;
+  }
+  
     :root{
       --green:#2f855a; --green-dark:#276749; --bg:#f7f7f7; --card:#ffffff;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:#1f2937}
+    a{color:inherit}
+    button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--green);color:#fff;font-weight:600}
+    button:hover{background:var(--green-dark)}
 
-    /* Header fixo */
-    header{
-      position:fixed;
-      top:0; left:0; right:0;
-      display:flex;align-items:center;justify-content:space-between;
-      background:var(--green);color:#fff;
-      padding:14px 28px;
-      z-index:1000;
-    }
+    .cliente header{display:flex;align-items:center;justify-content:space-between;background:var(--green);color:#fff;padding:14px 28px}
+    .cliente .nav a{margin:0 10px;color:#fff;text-decoration:none;font-weight:600}
+    .cliente .logo{font-weight:800;font-size:20px;letter-spacing:.3px}
+    .banner{background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;color:#fff;text-align:center;padding:60px 16px}
+    .banner h1{margin:0 0 6px;text-shadow:1px 1px 4px rgba(0,0,0,.7)}
+    .banner p{text-shadow:1px 1px 4px rgba(0,0,0,.7)}
+    .banner input{width:min(560px,92%);padding:12px;border-radius:8px;border:0;margin-top:10px}
+    .categorias{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px}
+    .chip{background:#ecfdf5;border:1px solid #b7e5cf;color:#065f46;padding:8px 12px;border-radius:999px;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;padding:24px;max-width:1100px;margin:0 auto}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:16px;text-align:center}
+    .card img{width:110px;height:110px;object-fit:contain;display:block;margin:8px auto 12px}
+    .card h3{margin:6px 0 2px}
+    .price{font-weight:800;margin:6px 0 12px}
+    footer{background:var(--green);color:#fff;text-align:center;padding:12px;margin-top:24px}
 
-    header nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    header nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      padding: 6px 10px;
-      transition: background 0.3s, color 0.3s;
-    }
-    header nav ul li a:hover {
-      background-color: #276749;
-      border-radius: 6px;
-      color: #fff;
-    }
-
-    .logo{font-weight:800;font-size:20px}
     .cart{display:flex;gap:6px;align-items:center;font-size:20px}
     .badge{min-width:24px;height:24px;border-radius:999px;background:#fff;color:var(--green);display:inline-flex;align-items:center;justify-content:center;font-weight:800}
-
-    /* Banner com imagem */
-    .banner{
-       background: url("/bella-vita-03/Começar-uma-horta-750x422.jpg") center/cover no-repeat;
-  width: 100%;          /* ocupa toda a largura da tela */
-  height: 200px;        /* deixa mais fino (ajuste aqui o valor) */
-  display: flex;        /* centraliza o texto dentro */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  margin-top: 60px;     /* espaço por causa do menu fixo */
-  text-shadow: 1px 1px 4px rgba(0,0,0,.7);
-}
-    .banner h1{
-      .banner h1,
-.banner p {
-  text-shadow: none; /* sem sombra = sem embaçado */
-    }}
-
-    /* Seção sobre nós */
-    .sobre{
-      max-width:800px;
-      margin:40px auto;
-      padding:20px;
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      text-align:justify;
-      line-height:1.6;
-    }
-    .sobre h2{
-      text-align:center;
-      color:var(--green-dark);
-      margin-bottom:16px; /*remover margem*/
-    }
-
-    footer{background:var(--green);color:#fff;text-align:center;padding:12px;margin-top:40px}
   </style>
 </head>
 <body class="cliente">
@@ -89,43 +66,44 @@
   <header>
     <div class="logo">🌱 Bella Vita</div>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>      
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>      
     <div class="cart">🛍️ <span id="qtd-carrinho" class="badge">0</span></div>
   </header>
 
-  <!-- Banner -->
   <div class="banner" id="home">
     <h1>Horta Natural Bella Vita</h1>
-    <p>Frescura e qualidade direto da nossa horta para sua mesa 🌿</p>
+    <p>Produtos frescos, saudáveis e direto da nossa horta até você</p>
   </div>
 
-  <!-- Sobre nós -->
-  <section class="sobre" id="sobre">
-    <h2>Sobre nós</h2>
+  <!-- Adicione a seção "Sobre" aqui -->
+  <div id="sobre" style="padding: 40px 20px; background: #fff; max-width: 1000px; margin: 0 auto;">
+    <h2>Sobre a Bella Vita</h2>
     <p>
-      A <strong>Bella Vita</strong> nasceu com o propósito de aproximar as pessoas
-      de uma alimentação mais saudável e natural. Trabalhamos com produtos frescos,
-      colhidos diretamente da nossa horta, respeitando o meio ambiente e valorizando
-      a agricultura sustentável.  
+      A <strong>Bella Vita</strong> é uma horta natural dedicada a oferecer produtos frescos, orgânicos e de alta qualidade direto da terra para sua mesa. Nosso compromisso é com a saúde, sustentabilidade e o bem-estar dos nossos clientes.
     </p>
     <p>
-      Nossa missão é oferecer verduras, legumes e frutas de qualidade,
-      garantindo sabor e nutrição para você e sua família.
-      Cada produto é cultivado com carinho para chegar até a sua mesa da melhor forma possível.
+      Trabalhamos com agricultores locais e seguimos práticas responsáveis para garantir que cada item entregue seja cultivado com carinho e respeito ao meio ambiente.
     </p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer id="contato">
-    <p>📞 Contato: (64) 99999-9999 | 📧 contato@bellavita.com</p>
-    <p>© 2025 Bella Vita — Todos os direitos reservados</p>
-  </footer>
-
+    <h3>Cuidados e Práticas na Nossa Horta</h3>
+    <p>
+      Na Bella Vita, cada etapa do cultivo é feita com atenção especial. Utilizamos técnicas de manejo sustentável, como a rotação de culturas, o uso de adubos orgânicos e o controle biológico de pragas, evitando o uso de agrotóxicos. O solo é preparado com compostagem natural, garantindo nutrientes essenciais para o desenvolvimento saudável das plantas.
+    </p>
+    <p>
+      A irrigação é feita de forma controlada, utilizando sistemas que economizam água e mantêm a umidade ideal para cada tipo de hortaliça. Nossos colaboradores monitoram diariamente o crescimento das plantas, realizando podas, remoção de folhas secas e inspeções para identificar possíveis doenças ou pragas.
+    </p>
+    <p>
+      O respeito à natureza está presente em todo o processo: preservamos áreas de vegetação nativa, incentivamos a presença de polinizadores naturais como abelhas e borboletas, e mantemos a biodiversidade da horta. A colheita é feita manualmente, selecionando apenas os produtos no ponto ideal de maturação para garantir sabor, frescor e qualidade.
+    </p>
+    <p>
+      Além disso, investimos em capacitação constante da equipe, promovendo treinamentos sobre boas práticas agrícolas, segurança alimentar e sustentabilidade. Todo esse cuidado resulta em alimentos mais saudáveis para você e sua família, com o compromisso de proteger o meio ambiente e valorizar o trabalho local.
+    </p>
+  </div>
+  </div>
 </body>
 </html>
-

@@ -59,6 +59,14 @@ header nav ul {
 
     .cart{display:flex;gap:6px;align-items:center;font-size:20px}
     .badge{min-width:24px;height:24px;border-radius:999px;background:#fff;color:var(--green);display:inline-flex;align-items:center;justify-content:center;font-weight:800}
+      .menu-produtos button {
+        font-size: 18px;
+        padding: 14px 24px;
+      }
+      .menu-produtos {
+        margin-top: 24px;
+      }
+      }
   </style>
 </head>
 <body class="cliente">
@@ -79,50 +87,42 @@ header nav ul {
   <div class="banner" id="home">
     <h1>Horta Natural Bella Vita</h1>
     <p>Produtos frescos, saudáveis e direto da nossa horta até você</p>
-    <input type="search" placeholder="Buscar produtos…" />
-  </div>
-
-  <div class="categorias">
-    <span class="chip">Verduras</span>
-    <span class="chip">Legumes</span>
-    <span class="chip">Frutas</span>
-    <span class="chip">Temperos</span>
-    <span class="chip">Orgânicos</span>
   </div>
   <!-- Produtos -->
 <section id="produtos">
-  <h1>Nossos Produtos</h1>
 
   <!-- Menu interno de categorias -->
   <div class="menu-produtos" style="display:flex; gap:10px; margin-bottom:20px;">
-    <button onclick="filtrarProdutos('verduras')">🥬 Verduras</button>
-    <button onclick="filtrarProdutos('legumes')">🍅 Legumes</button>
-    <button onclick="filtrarProdutos('frutas')">🍓 Frutas</button>
-    <button onclick="filtrarProdutos('temperos')">🌿 Temperos</button>
-    <button onclick="filtrarProdutos('todos')">Todos</button>
+    <div style="width:100%; display:flex; justify-content:center; gap:10px;">
+      <button onclick="filtrarProdutos('verduras')">🥬 Verduras</button>
+      <button onclick="filtrarProdutos('legumes')">🍅 Legumes</button>
+      <button onclick="filtrarProdutos('frutas')">🍓 Frutas</button>
+      <button onclick="filtrarProdutos('temperos')">🌿 Temperos</button>
+      <button onclick="filtrarProdutos('todos')">Todos</button>
+    </div>
   </div>
 
   <div class="grid" id="grid-produtos">
     <article class="card" data-categoria="verduras">
-      <img src="53c931b15d.webp" alt="Alface" />
+      <img src="imagem/53c931b15d.webp" alt="Alface" />
       <h3>Alface</h3>
       <div class="price">R$ 4,50</div>
       <button>Adicionar ao carrinho</button>
     </article>
     <article class="card" data-categoria="legumes">
-      <img src="tomate_345187874.jpg" alt="Tomate" />
+      <img src="imagem/tomate_345187874.jpg" alt="Tomate" />
       <h3>Tomate</h3>
       <div class="price">R$ 5,00</div>
       <button>Adicionar ao carrinho</button>
     </article>
     <article class="card" data-categoria="frutas">
-      <img src="maca-argentina1-a86acef532d11addf315221676880019-640-0.jpg" alt="Maçã" />
+      <img src="imagem/maca-argentina1-a86acef532d11addf315221676880019-640-0.jpg" alt="Maçã" />
       <h3>Maçã</h3>
       <div class="price">R$ 6,50</div>
       <button>Adicionar ao carrinho</button>
     </article>
     <article class="card" data-categoria="temperos">
-      <img src="verduras-Manjeiricao-1586829045667.jpg" alt="Manjericão" />
+      <img src="imagem/verduras-Manjeiricao-1586829045667.jpg" alt="Manjericão" />
       <h3>Manjericão</h3>
       <div class="price">R$ 2,50</div>
       <button>Adicionar ao carrinho</button>
